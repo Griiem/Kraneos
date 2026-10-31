@@ -1,1 +1,109 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Kraneos</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0b0f;color:#e5e5eb;font-family:Arial,sans-serif;line-height:1.7}
+main{max-width:850px;margin:65px auto;padding:30px}
+h1{color:#a78bfa;font-size:36px}
+h2{color:#c4b5fd;margin-top:32px}
+p{color:#b7b7c5}
+.brand{color:#a78bfa;font-weight:bold;letter-spacing:2px}
+button{background:#1c1c28;color:#ddd;border:1px solid #39394b;padding:9px 16px;border-radius:8px;cursor:pointer;margin-right:6px}
+button.active{background:#7c3aed;color:white}
+footer{margin-top:55px;border-top:1px solid #292934;padding-top:20px;color:#777}
+</style>
+</head>
+<body>
+<main>
+<span class="brand">KRANEOS</span>
+<div style="margin-top:25px">
+<button id="pt" class="active" onclick="setLang('pt')">Português</button>
+<button id="en" onclick="setLang('en')">English</button>
+</div>
+
+<div id="content"></div>
+
+<footer>© 2026 Kraneos. All rights reserved.</footer>
+</main>
+
+<script>
+const translations = {
+pt: `
+<h1>Política de Privacidade</h1>
+<p>Última atualização: 31 de outubro de 2026</p>
+
+<h2>1. Introdução</h2>
+<p>Esta Política de Privacidade explica como o Kraneos poderá acessar, utilizar e armazenar informações durante seu funcionamento no Discord.</p>
+
+<h2>2. Informações que podemos acessar</h2>
+<p>Dependendo dos recursos utilizados, o Kraneos poderá acessar informações como IDs de usuários, IDs de servidores, cargos, canais, mensagens e permissões necessárias para executar suas funcionalidades.</p>
+
+<h2>3. Informações que podemos armazenar</h2>
+<p>O Kraneos poderá armazenar IDs de usuários e servidores, configurações, preferências, registros de moderação e outras informações necessárias para fornecer seus serviços. Os dados efetivamente armazenados dependerão dos recursos implementados.</p>
+
+<h2>4. Como utilizamos as informações</h2>
+<p>As informações poderão ser utilizadas para executar comandos, administrar servidores, aplicar ferramentas de moderação, manter configurações e melhorar o funcionamento do bot.</p>
+
+<h2>5. Compartilhamento de informações</h2>
+<p>Não pretendemos vender informações pessoais. Informações poderão ser processadas por serviços necessários à operação do Kraneos ou divulgadas quando exigido por lei.</p>
+
+<h2>6. Segurança e retenção</h2>
+<p>Buscaremos adotar medidas razoáveis para proteger as informações. Os períodos de armazenamento poderão variar conforme a finalidade e os recursos utilizados.</p>
+
+<h2>7. Seus direitos e solicitações</h2>
+<p>Você poderá entrar em contato pelos canais oficiais do Kraneos para solicitar informações sobre dados associados à sua utilização do bot ou pedir sua exclusão, quando aplicável.</p>
+
+<h2>8. Alterações nesta política</h2>
+<p>Esta política poderá ser atualizada conforme o desenvolvimento do Kraneos. A versão mais recente estará disponível nesta página.</p>
+
+<h2>9. Contato</h2>
+<p>Para dúvidas sobre privacidade, entre em contato pelos canais oficiais do Kraneos.</p>
+`,
+en: `
+<h1>Privacy Policy</h1>
+<p>Last updated: October 31, 2026</p>
+
+<h2>1. Introduction</h2>
+<p>This Privacy Policy explains how Kraneos may access, use, and store information while operating on Discord.</p>
+
+<h2>2. Information We May Access</h2>
+<p>Depending on the features being used, Kraneos may access information such as user IDs, server IDs, roles, channels, messages, and permissions required to perform its functions.</p>
+
+<h2>3. Information We May Store</h2>
+<p>Kraneos may store user and server IDs, settings, preferences, moderation records, and other information necessary to provide its services. The information actually stored will depend on the implemented features.</p>
+
+<h2>4. How We Use Information</h2>
+<p>Information may be used to execute commands, manage servers, provide moderation tools, maintain settings, and improve the bot's functionality.</p>
+
+<h2>5. Information Sharing</h2>
+<p>We do not intend to sell personal information. Information may be processed by services necessary to operate Kraneos or disclosed when required by law.</p>
+
+<h2>6. Security and Data Retention</h2>
+<p>We aim to implement reasonable measures to protect information. Retention periods may vary depending on the purpose and features being used.</p>
+
+<h2>7. Your Rights and Requests</h2>
+<p>You may contact Kraneos through its official channels to request information about data associated with your use of the bot or request its deletion, where applicable.</p>
+
+<h2>8. Changes to This Policy</h2>
+<p>This policy may be updated as Kraneos develops. The latest version will be available on this page.</p>
+
+<h2>9. Contact</h2>
+<p>For privacy-related questions, please contact Kraneos through its official channels.</p>
+`
+};
+
+function setLang(lang) {
+document.getElementById('content').innerHTML = translations[lang];
+document.getElementById('pt').classList.toggle('active',lang==='pt');
+document.getElementById('en').classList.toggle('active',lang==='en');
+document.documentElement.lang = lang==='pt'?'pt-BR':'en';
+}
+setLang('pt');
+</script>
+</body>
+</html>
